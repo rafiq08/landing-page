@@ -65,7 +65,33 @@ body{
 .img-ken{
     width: 200px;
     margin-bottom: 100px;
+    filter: brightness(1);
+    transform: scale(1); /* tata letak gambar */ 
+    transition: all 1s ease; /* efek lebih smooth */
 }
+
+.img-ken:hover{
+    transform: scale(0.4);/* kecepatan transisi */
+    transition: all 1s ease;
+    animation-iteration-count: infinite;
+}
+
+
+/* Code untuk animasi */
+@keyframes zoom-in-out {
+    from {transform: scale(1)}
+    to {transform: scale(0.7)}
+  }
+  
+  /* Memberikan animasi pada element */
+img {
+    -webkit-animation:zoom-in-out 2s; /* Safari dan Chrome */
+    -moz-animation:zoom-in-out 2s; /* Firefox */
+    -ms-animation:zoom-in-out 2s; /* Internet Explorer */
+    -o-animation:zoom-in-out 2s; /* Opera */
+    animation:zoom-in-out 2s; /* W3C */
+  }
+
 
 .about-me{
     background-color: #eeeeee;
